@@ -19,6 +19,7 @@ def get_distance():
     distance = pulse_duration * 17165 / 1000000
     distance = round(distance, 0)
     print ('Distance:',"{:.0f}".format(distance),'cm')
+    return distance
 
 def testing():
     while True:
