@@ -1,5 +1,5 @@
 from machine import Pin
-import time
+from time import sleep
 
 # Defining motor pins
 
@@ -54,43 +54,17 @@ def stop():
     In4.low()
     
 if __name__ == "__main__":
-    input("enter to run")
+    functions = [move_forward, move_backward, turn_right, turn_left, rotate_left, rotate_right]
+    
+    print("running")
+    sleep(1.5)
+    
+    sleep_time = 2
     while True:
-        """
-        move_forward()
-        print("Forward")
-        time.sleep(2)
-        stop()
-        print("Stop")
-        time.sleep(2)
-        move_backward()
-        print("Backward")   
-        time.sleep(2)
-        stop()
-        print("Stop")
-        time.sleep(2)
-        
-        turn_right()
-        print("Forward")
-        time.sleep(2)
-        stop()
-        print("Stop")
-        time.sleep(2)
-        turn_left()
-        print("Backward")   
-        time.sleep(2)
-        stop()
-        print("Stop")
-        time.sleep(2)
-        """
-        
-        rotate_right()
-        time.sleep(2)
-        stop()
-        print("Stop")
-        time.sleep(2)
-        rotate_left()
-        time.sleep(2)
-        stop()
-        print("Stop")
-        time.sleep(2)
+        for function in functions:
+            print(function.__name__)
+            function()
+            sleep(sleep_time)
+            print("Stop")
+            stop()
+            sleep(sleep_time)

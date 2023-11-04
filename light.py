@@ -1,10 +1,7 @@
 from machine import Pin, ADC
 from time import sleep
 
-A0 = 19
-D0 = 18
-
-digital_pin = Pin(D0, Pin.IN)
+digital_pin = Pin(18, Pin.IN)
 #analog_pin = ADC(Pin(26))
 #analog_pin.atten(ADC.ATTN_11DB)
 
