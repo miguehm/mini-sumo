@@ -11,13 +11,13 @@ In2=Pin(11,Pin.OUT)
 In3=Pin(12,Pin.OUT)  
 In4=Pin(13,Pin.OUT)  
 
-def move_forward():
+def move_backward():
     In1.high()
     In2.low()
     In3.high()
     In4.low()
     
-def move_backward():
+def move_forward():
     In1.low()
     In2.high()
     In3.low()
@@ -54,17 +54,17 @@ def stop():
     In4.low()
     
 if __name__ == "__main__":
-    functions = [move_forward, move_backward, turn_right, turn_left, rotate_left, rotate_right]
+    functions = [move_forward, move_backward, turn_left, turn_right, rotate_left, rotate_right]
     
     print("running")
-    sleep(1.5)
+    sleep(1)
     
-    sleep_time = 2
+    sleep_time = 1
     while True:
         for function in functions:
-            print(function.__name__)
+            ##print(function.__name__)
             function()
-            sleep(sleep_time)
-            print("Stop")
-            stop()
-            sleep(sleep_time)
+            #sleep(sleep_time)
+            #print("Stop")
+            #stop()
+            #sleep(sleep_time)
